@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Stock Market Tracker</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Stock Market Tracker</h1>
+
+  <button onclick="calculateAverage()">Calculate Average Price</button>
+  <div id="average" class="result card"></div>
+
+  <label for="sectorFilter">Filter by sector:</label>
+  <select id="sectorFilter" onchange="filterBySector()">
+    <option value="all">All</option>
+    <option value="Tech">Tech</option>
+    <option value="Finance">Finance</option>
+    <option value="Energy">Energy</option>
+  </select>
+
+  <button onclick="findHighestVolume()">Find Highest Volume Stock</button>
+  <div id="highestVolume" class="result card"></div>
+
+  <button onclick="groupByPrice()">Group Stocks by Price Range</button>
+  <div id="grouped" class="result card"></div>
+
+  <button onclick="fetchNewData()">Simulate Fetch New Data</button>
+  <div id="fetchResult" class="result card"></div>
+
+  <table id="stockTable">
+    <thead>
+      <tr>
+        <th>Symbol</th>
+        <th>Price</th>
+        <th>Volume</th>
+        <th>Sector</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+
+  <script src="SMT.js"></script>
+</body>
+</html>
